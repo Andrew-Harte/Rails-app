@@ -1,27 +1,37 @@
-<p id="notice"><%= notice %></p>
+<div class="heading">
+  <div class="search_box">
+    <input type="text" placeholder="search_box">
+  </div>
+</div>
 
-<h1>Posts</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<div class="postings">
+  <div class="main_body">
+    <div class="posts">
+      <!-- <= image_tag 'slack-logo.png' > -->
+      <!-- <img src="slack-logo.png" alt="slack-logo"> -->
+      <% @posts.each do |post| %>
+          <div class="indivposts">
+            <div><%= post.title %></div>
+            <div><%= post.comment %></div>
+            <input type="text" placeholder="<%= post.comment %>"/>
+          </div>
+      <% end %>
+    </div>
+    <!-- <div class="comment_box">
+      <input type="text" placeholder="commentary"/>
+    </div>  --> 
+  </div>
+  <div class="side_body">
+    <div class="advert_one">
+      <%= image_tag 'dj_logo.png' %>
+      <!-- <img src="dj_logo.png" alt="dj_logo"/> -->
+    </div>
+  
+  </div>
+</div>
+<!-- <div class="image">
+  <img src="test_picture.png" alt="Image will appear here">
+</div> -->
 
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
-
-<%= link_to 'New Post', new_post_path %>
