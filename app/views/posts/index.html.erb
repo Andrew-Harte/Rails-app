@@ -10,24 +10,32 @@
     <div class="posts">
       <!-- <= image_tag 'slack-logo.png' > -->
       <!-- <img src="slack-logo.png" alt="slack-logo"> -->
+
       <% @posts.each do |post| %>
           <div class="indivposts">
-            <div><%= post.title %></div>
-            <div><%= post.comment %></div>
-            <input type="text" placeholder="<%= post.comment %>"/>
+            <ul>
+
+ 
+
+                <li><h5><%= link_to post.title, post_path(post) %></h5></li>
+                <li><%= post.comment %></li>
+            </ul>
           </div>
-      <% end %>
+         <div class="former">
+                <%= render 'form', post: post %>
+            </div>
+            
+          
+      <% end %> 
+            
     </div>
-    <!-- <div class="comment_box">
-      <input type="text" placeholder="commentary"/>
-    </div>  --> 
-  </div>
-  <div class="side_body">
-    <div class="advert_one">
-      <%= image_tag 'dj_logo.png' %>
-      <!-- <img src="dj_logo.png" alt="dj_logo"/> -->
-    </div>
-  
+      
+          <div class="former">
+            
+                <%= render 'form', post: @post %>
+             
+          </div>
+         
   </div>
 </div>
 <!-- <div class="image">

@@ -42,7 +42,7 @@ body{
 
 .main_body{
 	margin: 100px 50px 100px 50px;
-	width: 60%;
+	width: 100%;
 	height: 10000px;
 	border: 3px solid black;
 	background-color: white;	
@@ -50,22 +50,11 @@ body{
 	flex-direction: column;
 }
 
-.side_body{
-	margin: 100px 50px 100px 50px;
-	width: 100%;
-	height: 10000px;
-	border: 3px solid black;
-	display: flex;
-	flex-direction: column;
-	/*display: inline-block;*/
-	background-color: orange;
-}
-
 .posts{
 	/*margin: 100px 50px 100px 50px;*/
 	
-	/*width: 100%;
-	height: 5%;
+	/*width: 100%;*/
+	height: 100%;
 	border: 3px solid black;
 	/*display: flex;*/
 	background-color: yellow;
@@ -96,4 +85,8 @@ body{
 
 .advert_one{
 	align-self: center;
+}
+
+li {
+	line-height: 1;
 }

@@ -40,6 +40,9 @@ ActiveRecord::Schema.define(version: 2018_09_27_183653) do
   end
 
   create_table "votes", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "post_id"
+    t.integer "direction"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
