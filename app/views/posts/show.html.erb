@@ -12,9 +12,9 @@
                         <%end%>
                     </ul>
                 </div>    
-                    <div class="form">
-                        <%= render 'comments/form', post: @post, comment: @post.comments.new %>
-                    </div>
+                <div class="form">
+                    <%= render 'comments/form', post: @post, comment: @post.comments.new %>
+                </div>
 
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
